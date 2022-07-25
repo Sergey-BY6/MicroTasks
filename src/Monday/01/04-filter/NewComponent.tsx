@@ -1,15 +1,17 @@
 import React from "react"
+import {FilterType} from '../../../App';
 
 
 
-type MoneyType = {
+
+export type MoneyType = {
     banknots: string
     value: number
     number: string
 }
 type NewComponentPropsType = {
     currentMoneyyyy: Array <MoneyType>
-    buttonClick: any
+    buttonClick: (nameButton: FilterType) => void
 }
 
 export  const NewComponent = (props: NewComponentPropsType) => {

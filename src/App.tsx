@@ -3,10 +3,10 @@ import './App.css';
 import {NewComponent} from './Monday/01/04-filter/NewComponent';
 
 
-type FilterType = 'all' | 'RUBLS' | 'Dollars' | any
+export type FilterType = 'all' | 'RUBLS' | 'Dollars' | any
 
 function App() {
-   const [money, setMoney] = useState([
+   let money = [
         {banknots: 'Dollars', value: 100, number: ' a1234567890'},
         {banknots: 'Dollars', value: 50, number: ' z1234567890'},
         {banknots: 'RUBLS', value: 100, number: ' w1234567890'},
@@ -15,7 +15,7 @@ function App() {
         {banknots: 'RUBLS', value: 100, number: ' r1234567890'},
         {banknots: 'Dollars', value: 50, number: ' x1234567890'},
         {banknots: 'RUBLS', value: 50, number: ' v1234567890'},
-    ])
+    ]
 
     const [filter, setFilter] = useState<FilterType>('all')
 
